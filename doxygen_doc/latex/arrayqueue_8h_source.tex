@@ -1,0 +1,99 @@
+\hypertarget{arrayqueue_8h_source}{}\doxysection{arrayqueue.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_ArrayQueue\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_ArrayQueue\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \textcolor{keyword}{class }\mbox{\hyperlink{class_array_queue}{ArrayQueue}} \{}
+\DoxyCodeLine{10   \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_array_queue}{ArrayQueue}}();}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_array_queue}{\string~ArrayQueue}}();}
+\DoxyCodeLine{13     \textcolor{keywordtype}{bool} isEmpty() \textcolor{keyword}{const};}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} clear();}
+\DoxyCodeLine{15     T\& front();}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} enqueue(\textcolor{keyword}{const} T\& value);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} dequeue();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19   \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     \textcolor{comment}{// Disable copy constructor and assignment operator.}}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_array_queue}{ArrayQueue}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_array_queue}{ArrayQueue}}\& other);}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_array_queue}{ArrayQueue}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_array_queue}{ArrayQueue}}\& other);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \mbox{\hyperlink{class_array_queue}{ArrayQueue}}(\textcolor{keywordtype}{size\_t} capacity\_);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} swap(\mbox{\hyperlink{class_array_queue}{ArrayQueue}}\& other);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{size\_t} size() \textcolor{keyword}{const};}
+\DoxyCodeLine{27     T\& elementAt(\textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} expand();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{size\_t} capacity\_;}
+\DoxyCodeLine{31     T* elements\_;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{size\_t} beginIndex\_;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{size\_t} size\_;}
+\DoxyCodeLine{34 \};\textcolor{comment}{//end class ArrayQueue}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::ArrayQueue}}()}
+\DoxyCodeLine{37   : capacity\_(1), elements\_(new T[capacity\_]), beginIndex\_(0), size\_(0) \{\}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::\string~ArrayQueue}}() \{ \textcolor{keyword}{delete}[] elements\_; \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::isEmpty}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} size() == 0; \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::clear}}() \{ size\_ = 0; \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> T\& \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::front}}() \{ \textcolor{keywordflow}{return} elementAt(0); \}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::enqueue}}(\textcolor{keyword}{const} T\& value) \{}
+\DoxyCodeLine{48   \textcolor{keywordflow}{if} (size() >= capacity\_) \{ expand(); \}}
+\DoxyCodeLine{49   assert(size() < capacity\_);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   elementAt(size()) = value;}
+\DoxyCodeLine{52   assert(size\_ < capacity\_);}
+\DoxyCodeLine{53   size\_++;}
+\DoxyCodeLine{54 \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::dequeue}}() \{}
+\DoxyCodeLine{57   assert(!isEmpty());}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59   beginIndex\_++;}
+\DoxyCodeLine{60   \textcolor{comment}{// Wrap around to beginning.}}
+\DoxyCodeLine{61   beginIndex\_ \%= capacity\_;}
+\DoxyCodeLine{62   assert(beginIndex\_ < capacity\_);}
+\DoxyCodeLine{63   assert(size\_ > 0);}
+\DoxyCodeLine{64   size\_-\/-\/;}
+\DoxyCodeLine{65 \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::ArrayQueue}}(\textcolor{keywordtype}{size\_t} capacity)}
+\DoxyCodeLine{68   : capacity\_(capacity), elements\_(new T[capacity\_]), beginIndex\_(0), size\_(0) \{\}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::swap}}(\mbox{\hyperlink{class_array_queue}{ArrayQueue}}\& other) \{}
+\DoxyCodeLine{71   std::swap(capacity\_, other.capacity\_);}
+\DoxyCodeLine{72   std::swap(elements\_, other.elements\_);}
+\DoxyCodeLine{73   std::swap(beginIndex\_, other.beginIndex\_);}
+\DoxyCodeLine{74   std::swap(size\_, other.size\_);}
+\DoxyCodeLine{75 \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::size}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} size\_; \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> T\& \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::elementAt}}(\textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{80   \textcolor{comment}{// Allow writing to one-\/past-\/the-\/last element.}}
+\DoxyCodeLine{81   assert(index <= size());}
+\DoxyCodeLine{82   \textcolor{keywordtype}{size\_t} elementsIndex = (beginIndex\_ + index) \% capacity\_;}
+\DoxyCodeLine{83   assert(elementsIndex < capacity\_);}
+\DoxyCodeLine{84   \textcolor{keywordflow}{return} elements\_[elementsIndex];}
+\DoxyCodeLine{85 \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{class_array_queue}{ArrayQueue<T>::expand}}() \{}
+\DoxyCodeLine{88   \textcolor{keyword}{const} \textcolor{keywordtype}{int} EXPANSION\_FACTOR = 2;}
+\DoxyCodeLine{89   \mbox{\hyperlink{class_array_queue}{ArrayQueue}} newObject(capacity\_ * EXPANSION\_FACTOR);}
+\DoxyCodeLine{90   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} index = 0; index < size(); index++) \{ newObject.enqueue(elementAt(index)); \}}
+\DoxyCodeLine{91   swap(newObject);}
+\DoxyCodeLine{92 \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
