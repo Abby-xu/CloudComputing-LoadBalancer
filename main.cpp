@@ -1,14 +1,8 @@
-// main.cpp
-// Rong Xu 928009312
-
-/*
-- create request
-- random number generator
-- an array of webservers
-- loop
-- check if the webserver is done
-- give it a new request
-*/
+/**
+ * @file main.cpp
+ * @brief Main Script
+ * @details create request -> random number generator -> an array of webservers -> loop -> check if the webserver is done -> give it a new request
+ */
 
 #include "webserver.cpp"
 #include "loadbalancer.cpp"

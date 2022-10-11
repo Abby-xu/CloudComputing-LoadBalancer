@@ -1,5 +1,8 @@
-// loadbalancer.h
-// Rong Xu 928009312
+/**
+ * @file loadbalancer.h
+ * @brief Load Balancer
+ * @details declear a class called loadbalancer to include a queue of requests and keep tracking the time.
+ */
 
 #include "arrayqueue.h"
 #ifndef REQUEST_CPP

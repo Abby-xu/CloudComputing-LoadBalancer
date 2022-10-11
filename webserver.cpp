@@ -1,5 +1,8 @@
-// webserver.cpp
-// Rong Xu 928009312
+/**
+ * @file webserver.cpp
+ * @brief Webserver
+ * @details declear a class called webserver to take the request from the load balancer, process request, and ask for another request.
+ */
 
 #include <string>
 #include "request.cpp"
