@@ -1,26 +1,88 @@
 \hypertarget{classloadbalancer}{}\doxysection{loadbalancer Class Reference}
 \label{classloadbalancer}\index{loadbalancer@{loadbalancer}}
+
+
+load balancer  
+
+
+
+
+{\ttfamily \#include $<$loadbalancer.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}\label{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}} 
-int {\bfseries get\+Time} ()
+int \mbox{\hyperlink{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}{get\+Time}} ()
 \item 
-\mbox{\Hypertarget{classloadbalancer_a1db40a4c03bb309672ce0f334fcccc83}\label{classloadbalancer_a1db40a4c03bb309672ce0f334fcccc83}} 
-void {\bfseries inc\+Time} ()
+void \mbox{\hyperlink{classloadbalancer_a1db40a4c03bb309672ce0f334fcccc83}{inc\+Time}} ()
 \item 
-\mbox{\Hypertarget{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}\label{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}} 
-void {\bfseries add\+Request} (\mbox{\hyperlink{structrequest}{request}} r)
+void \mbox{\hyperlink{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}{add\+Request}} (\mbox{\hyperlink{structrequest}{request}} r)
 \item 
-\mbox{\Hypertarget{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}\label{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}} 
-\mbox{\hyperlink{structrequest}{request}} {\bfseries get\+Request} ()
+\mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}{get\+Request}} ()
 \item 
-\mbox{\Hypertarget{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}\label{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}} 
-bool {\bfseries is\+Request\+Queue\+Empty} ()
+bool \mbox{\hyperlink{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}{is\+Request\+Queue\+Empty}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+load balancer 
+
+include mutiple functions and private variables 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}\label{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}} 
+\index{loadbalancer@{loadbalancer}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void loadbalancer\+::add\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrequest}{request}}}]{r }\end{DoxyParamCaption})}
+
+add request into the load balancer 
+\begin{DoxyParams}{Parameters}
+{\em r} & as a request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}\label{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}} 
+\index{loadbalancer@{loadbalancer}!getRequest@{getRequest}}
+\index{getRequest@{getRequest}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{getRequest()}{getRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrequest}{request}} loadbalancer\+::get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the request \begin{DoxyReturn}{Returns}
+a request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}\label{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}} 
+\index{loadbalancer@{loadbalancer}!getTime@{getTime}}
+\index{getTime@{getTime}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily int loadbalancer\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the system time \begin{DoxyReturn}{Returns}
+system\+\_\+time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_a1db40a4c03bb309672ce0f334fcccc83}\label{classloadbalancer_a1db40a4c03bb309672ce0f334fcccc83}} 
+\index{loadbalancer@{loadbalancer}!incTime@{incTime}}
+\index{incTime@{incTime}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{incTime()}{incTime()}}
+{\footnotesize\ttfamily void loadbalancer\+::inc\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+increase the time clock \begin{DoxyReturn}{Returns}
+inc system\+\_\+time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}\label{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}} 
+\index{loadbalancer@{loadbalancer}!isRequestQueueEmpty@{isRequestQueueEmpty}}
+\index{isRequestQueueEmpty@{isRequestQueueEmpty}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{isRequestQueueEmpty()}{isRequestQueueEmpty()}}
+{\footnotesize\ttfamily bool loadbalancer\+::is\+Request\+Queue\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+check if the load balancer is empty or not \begin{DoxyReturn}{Returns}
+True for empty and False for non-\/empty 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-loadbalancer.\+h\item 
-loadbalancer.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{loadbalancer_8h}{loadbalancer.\+h}}\item 
+\mbox{\hyperlink{loadbalancer_8cpp}{loadbalancer.\+cpp}}\end{DoxyCompactItemize}

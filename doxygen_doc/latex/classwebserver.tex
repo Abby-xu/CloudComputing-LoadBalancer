@@ -1,5 +1,10 @@
 \hypertarget{classwebserver}{}\doxysection{webserver Class Reference}
 \label{classwebserver}\index{webserver@{webserver}}
+
+
+web server class  
+
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,17 +14,72 @@
 \mbox{\Hypertarget{classwebserver_ad7be985ce4df02c90c0abffd5bbeaa11}\label{classwebserver_ad7be985ce4df02c90c0abffd5bbeaa11}} 
 string {\bfseries get\+Name} ()
 \item 
-\mbox{\Hypertarget{classwebserver_af909efd5f3b665ae872974146958216e}\label{classwebserver_af909efd5f3b665ae872974146958216e}} 
-{\bfseries webserver} (char c)
+\mbox{\hyperlink{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}{webserver}} ()
 \item 
-\mbox{\Hypertarget{classwebserver_a83342b87af13a2917e14bf24cc564457}\label{classwebserver_a83342b87af13a2917e14bf24cc564457}} 
-void {\bfseries add\+Request} (\mbox{\hyperlink{structrequest}{request}} req, int curr\+\_\+time)
+\mbox{\hyperlink{classwebserver_af909efd5f3b665ae872974146958216e}{webserver}} (char c)
 \item 
-\mbox{\Hypertarget{classwebserver_ab8870c8b4a5c5bf754cfc2c41fba08bb}\label{classwebserver_ab8870c8b4a5c5bf754cfc2c41fba08bb}} 
-bool {\bfseries is\+Request\+Done} (int curr\+\_\+time)
+void \mbox{\hyperlink{classwebserver_a83342b87af13a2917e14bf24cc564457}{add\+Request}} (\mbox{\hyperlink{structrequest}{request}} req, int curr\+\_\+time)
+\item 
+bool \mbox{\hyperlink{classwebserver_ab8870c8b4a5c5bf754cfc2c41fba08bb}{is\+Request\+Done}} (int curr\+\_\+time)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+web server class 
+
+include mutiple functions and private variables 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}\label{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}} 
+\index{webserver@{webserver}!webserver@{webserver}}
+\index{webserver@{webserver}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{webserver()}{webserver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily webserver\+::webserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+default constructor \mbox{\Hypertarget{classwebserver_af909efd5f3b665ae872974146958216e}\label{classwebserver_af909efd5f3b665ae872974146958216e}} 
+\index{webserver@{webserver}!webserver@{webserver}}
+\index{webserver@{webserver}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{webserver()}{webserver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily webserver\+::webserver (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor with the param c 
+\begin{DoxyParams}{Parameters}
+{\em c} & as a char for the server name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwebserver_a83342b87af13a2917e14bf24cc564457}\label{classwebserver_a83342b87af13a2917e14bf24cc564457}} 
+\index{webserver@{webserver}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void webserver\+::add\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrequest}{request}}}]{req,  }\item[{int}]{curr\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+add request to the webserver 
+\begin{DoxyParams}{Parameters}
+{\em r} & as a request, curr\+\_\+time as an integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebserver_ab8870c8b4a5c5bf754cfc2c41fba08bb}\label{classwebserver_ab8870c8b4a5c5bf754cfc2c41fba08bb}} 
+\index{webserver@{webserver}!isRequestDone@{isRequestDone}}
+\index{isRequestDone@{isRequestDone}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{isRequestDone()}{isRequestDone()}}
+{\footnotesize\ttfamily bool webserver\+::is\+Request\+Done (\begin{DoxyParamCaption}\item[{int}]{curr\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+check if the request is done 
+\begin{DoxyParams}{Parameters}
+{\em curr\+\_\+time} & as an integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True for it\textquotesingle{}s done and False as not 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-webserver.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{webserver_8cpp}{webserver.\+cpp}}\end{DoxyCompactItemize}

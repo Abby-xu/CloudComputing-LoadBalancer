@@ -1,0 +1,43 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Main Script.  
+
+
+{\ttfamily \#include \char`\"{}webserver.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}loadbalancer.\+cpp\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{main_8cpp_ab0324c748c79a12301c5fd8525caaab4}{create\+Random\+Request}} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main Script. 
+
+create request -\/\texorpdfstring{$>$}{>} random number generator -\/\texorpdfstring{$>$}{>} an array of webservers -\/\texorpdfstring{$>$}{>} loop -\/\texorpdfstring{$>$}{>} check if the webserver is done -\/\texorpdfstring{$>$}{>} give it a new request 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ab0324c748c79a12301c5fd8525caaab4}\label{main_8cpp_ab0324c748c79a12301c5fd8525caaab4}} 
+\index{main.cpp@{main.cpp}!createRandomRequest@{createRandomRequest}}
+\index{createRandomRequest@{createRandomRequest}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{createRandomRequest()}{createRandomRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrequest}{request}} create\+Random\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+random request generator 
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a request with random IP in, IP out and process time 
+\end{DoxyReturn}

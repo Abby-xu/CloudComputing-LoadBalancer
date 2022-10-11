@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CloudComputing-LoadBalancer: loadbalancer.h Source File</title>
+<title>CSCE412 project 2 - Load Balancer: loadbalancer.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CloudComputing-LoadBalancer
+   <div id="projectname">CSCE412 project 2 - Load Balancer
    </div>
+   <div id="projectbrief">A load balancer implemented by C++</div>
   </td>
  </tr>
  </tbody>
@@ -72,31 +73,36 @@ $(function() {
   <div class="headertitle"><div class="title">loadbalancer.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// loadbalancer.h</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Rong Xu 928009312</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;arrayqueue.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef REQUEST_CPP</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;request.cpp&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classloadbalancer.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="classloadbalancer.html">loadbalancer</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_class" href="classloadbalancer.html">loadbalancer</a>() {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            system_time = 0;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">int</span> getTime();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">void</span> incTime();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> addRequest (<a class="code hl_struct" href="structrequest.html">request</a> r);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_struct" href="structrequest.html">request</a> getRequest();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">bool</span> isRequestQueueEmpty();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">int</span> system_time;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        ArrayQueue &lt;request&gt; requestQueue;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="ttc" id="aclassloadbalancer_html"><div class="ttname"><a href="classloadbalancer.html">loadbalancer</a></div><div class="ttdef"><b>Definition:</b> loadbalancer.h:9</div></div>
-<div class="ttc" id="astructrequest_html"><div class="ttname"><a href="structrequest.html">request</a></div><div class="ttdef"><b>Definition:</b> request.cpp:9</div></div>
+<a href="loadbalancer_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="arrayqueue_8h.html">arrayqueue.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef REQUEST_CPP</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="request_8cpp.html">request.cpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classloadbalancer.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classloadbalancer.html">loadbalancer</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="classloadbalancer.html">loadbalancer</a>() {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            system_time = 0;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classloadbalancer.html#afc308893c7ab0fc8b92036deae7a2de9">getTime</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classloadbalancer.html#a1db40a4c03bb309672ce0f334fcccc83">incTime</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classloadbalancer.html#afd55bd66f471ecd3d0ea6bc23c690b58">addRequest</a> (<a class="code hl_struct" href="structrequest.html">request</a> r);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_struct" href="structrequest.html">request</a> <a class="code hl_function" href="classloadbalancer.html#a3d1715e4b2218a7aa9ad74e3e4fa6167">getRequest</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classloadbalancer.html#a157774bcf936cd8d22ae15e69bf3149a">isRequestQueueEmpty</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">int</span> system_time;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        ArrayQueue &lt;request&gt; requestQueue;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="ttc" id="aarrayqueue_8h_html"><div class="ttname"><a href="arrayqueue_8h.html">arrayqueue.h</a></div><div class="ttdoc">Array Queue.</div></div>
+<div class="ttc" id="aclassloadbalancer_html"><div class="ttname"><a href="classloadbalancer.html">loadbalancer</a></div><div class="ttdoc">load balancer</div><div class="ttdef"><b>Definition:</b> loadbalancer.h:16</div></div>
+<div class="ttc" id="aclassloadbalancer_html_a157774bcf936cd8d22ae15e69bf3149a"><div class="ttname"><a href="classloadbalancer.html#a157774bcf936cd8d22ae15e69bf3149a">loadbalancer::isRequestQueueEmpty</a></div><div class="ttdeci">bool isRequestQueueEmpty()</div><div class="ttdef"><b>Definition:</b> loadbalancer.cpp:37</div></div>
+<div class="ttc" id="aclassloadbalancer_html_a1db40a4c03bb309672ce0f334fcccc83"><div class="ttname"><a href="classloadbalancer.html#a1db40a4c03bb309672ce0f334fcccc83">loadbalancer::incTime</a></div><div class="ttdeci">void incTime()</div><div class="ttdef"><b>Definition:</b> loadbalancer.cpp:21</div></div>
+<div class="ttc" id="aclassloadbalancer_html_a3d1715e4b2218a7aa9ad74e3e4fa6167"><div class="ttname"><a href="classloadbalancer.html#a3d1715e4b2218a7aa9ad74e3e4fa6167">loadbalancer::getRequest</a></div><div class="ttdeci">request getRequest()</div><div class="ttdef"><b>Definition:</b> loadbalancer.cpp:43</div></div>
+<div class="ttc" id="aclassloadbalancer_html_afc308893c7ab0fc8b92036deae7a2de9"><div class="ttname"><a href="classloadbalancer.html#afc308893c7ab0fc8b92036deae7a2de9">loadbalancer::getTime</a></div><div class="ttdeci">int getTime()</div><div class="ttdef"><b>Definition:</b> loadbalancer.cpp:15</div></div>
+<div class="ttc" id="aclassloadbalancer_html_afd55bd66f471ecd3d0ea6bc23c690b58"><div class="ttname"><a href="classloadbalancer.html#afd55bd66f471ecd3d0ea6bc23c690b58">loadbalancer::addRequest</a></div><div class="ttdeci">void addRequest(request r)</div><div class="ttdef"><b>Definition:</b> loadbalancer.cpp:28</div></div>
+<div class="ttc" id="arequest_8cpp_html"><div class="ttname"><a href="request_8cpp.html">request.cpp</a></div><div class="ttdoc">Request.</div></div>
+<div class="ttc" id="astructrequest_html"><div class="ttname"><a href="structrequest.html">request</a></div><div class="ttdoc">request struct</div><div class="ttdef"><b>Definition:</b> request.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

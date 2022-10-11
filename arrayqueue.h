@@ -1,3 +1,7 @@
+/**
+ * @file arrayqueue.h
+ * @brief Array Queue
+ */
 #ifndef __ArrayQueue_H_
 #define __ArrayQueue_H_
 
@@ -5,7 +9,10 @@
 #include <cassert>
 
 using namespace std;
-
+/**
+ * @brief helper data structure as queue
+ * @details the arrayqueue has similar entities like queue, I got this template online.
+ */
 template<typename T> class ArrayQueue {
   public:
     ArrayQueue();

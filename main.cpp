@@ -13,6 +13,11 @@
 #include <sstream>
 using namespace std;
 
+/**
+ * @details random request generator
+ * @param None
+ * @return a request with random IP in, IP out and process time
+ */
 request createRandomRequest() {
     stringstream ip_in, ip_out;
     request r; 

@@ -1,28 +1,26 @@
 \hypertarget{loadbalancer_8h_source}{}\doxysection{loadbalancer.\+h}
-
+\mbox{\hyperlink{loadbalancer_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{comment}{// loadbalancer.h}}
-\DoxyCodeLine{2 \textcolor{comment}{// Rong Xu 928009312}}
-\DoxyCodeLine{3 }
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}arrayqueue.h"{}}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef REQUEST\_CPP}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}request.cpp"{}}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classloadbalancer}{loadbalancer}} \{}
-\DoxyCodeLine{10     \textcolor{keyword}{public}:}
-\DoxyCodeLine{11         \mbox{\hyperlink{classloadbalancer}{loadbalancer}}() \{}
-\DoxyCodeLine{12             system\_time = 0;}
-\DoxyCodeLine{13         \}}
-\DoxyCodeLine{14         \textcolor{keywordtype}{int} getTime();}
-\DoxyCodeLine{15         \textcolor{keywordtype}{void} incTime();}
-\DoxyCodeLine{16         \textcolor{keywordtype}{void} addRequest (\mbox{\hyperlink{structrequest}{request}} r);}
-\DoxyCodeLine{17         \mbox{\hyperlink{structrequest}{request}} getRequest();}
-\DoxyCodeLine{18         \textcolor{keywordtype}{bool} isRequestQueueEmpty();}
-\DoxyCodeLine{19     \textcolor{keyword}{private}:}
-\DoxyCodeLine{20         \textcolor{keywordtype}{int} system\_time;}
-\DoxyCodeLine{21         ArrayQueue <request> requestQueue;}
-\DoxyCodeLine{22 \};}
-\DoxyCodeLine{23 }
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{arrayqueue_8h}{arrayqueue.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef REQUEST\_CPP}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{request_8cpp}{request.cpp}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{classloadbalancer}{loadbalancer}} \{}
+\DoxyCodeLine{17     \textcolor{keyword}{public}:}
+\DoxyCodeLine{18         \mbox{\hyperlink{classloadbalancer}{loadbalancer}}() \{}
+\DoxyCodeLine{19             system\_time = 0;}
+\DoxyCodeLine{20         \}}
+\DoxyCodeLine{21         \textcolor{keywordtype}{int} \mbox{\hyperlink{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}{getTime}}();}
+\DoxyCodeLine{22         \textcolor{keywordtype}{void} \mbox{\hyperlink{classloadbalancer_a1db40a4c03bb309672ce0f334fcccc83}{incTime}}();}
+\DoxyCodeLine{23         \textcolor{keywordtype}{void} \mbox{\hyperlink{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}{addRequest}} (\mbox{\hyperlink{structrequest}{request}} r);}
+\DoxyCodeLine{24         \mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}{getRequest}}();}
+\DoxyCodeLine{25         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}{isRequestQueueEmpty}}();}
+\DoxyCodeLine{26     \textcolor{keyword}{private}:}
+\DoxyCodeLine{27         \textcolor{keywordtype}{int} system\_time;}
+\DoxyCodeLine{28         ArrayQueue <request> requestQueue;}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
 
 \end{DoxyCode}

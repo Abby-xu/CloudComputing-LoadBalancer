@@ -9,6 +9,10 @@
 #include "request.cpp"
 #endif
 
+/**
+ * @brief load balancer
+ * @details include mutiple functions and private variables
+ */
 class loadbalancer {
     public:
         loadbalancer() {
