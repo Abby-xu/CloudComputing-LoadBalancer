@@ -19,8 +19,6 @@
 #include <sstream>
 using namespace std;
 
-const int NUM_WEBSERVERS = 5;
-
 request createRandomRequest() {
     stringstream ip_in, ip_out;
     request r; 
@@ -38,6 +36,13 @@ request createRandomRequest() {
 
 int main() {
 
+    int num_webserver, run_time;
+
+    cout << "Please input the number of servers: ";
+    cin >> num_webserver;
+    cout << "Please input the time you want to run the load balancer (integer like 100000): ";
+    cin >> run_time;
+
     srand(time(0));
     loadbalancer lb;
 
@@ -48,22 +53,22 @@ int main() {
     }
 
     // an array of webservers
-    webserver webarray[NUM_WEBSERVERS];
-    for (int i = 0; i < NUM_WEBSERVERS; i++) {
+    webserver webarray[num_webserver];
+    for (int i = 0; i < num_webserver; i++) {
         webserver w((char)(i+65));
         webarray[i] = w;
         webarray[i].addRequest(lb.getRequest(), lb.getTime());
     }
     
     // loop
-    while (lb.getTime() < 10000) {
+    while (lb.getTime() < run_time) {
         int curr_time = lb.getTime();
 
         // check if each webserver is done
-        if(webarray[curr_time % NUM_WEBSERVERS].isRequestDone(curr_time)) {
-            request r = webarray[curr_time % NUM_WEBSERVERS].getRequest();
-            cout << "At " << curr_time << " " << webarray[curr_time % NUM_WEBSERVERS].getName() << " process request from " << r.source << " to " << r.destination << endl;
-            webarray[curr_time % NUM_WEBSERVERS].addRequest(lb.getRequest(), curr_time); // give a new request   
+        if(webarray[curr_time % num_webserver].isRequestDone(curr_time)) {
+            request r = webarray[curr_time % num_webserver].getRequest();
+            cout << "At " << curr_time << " " << webarray[curr_time % num_webserver].getName() << " process request from " << r.source << " to " << r.destination << endl;
+            webarray[curr_time % num_webserver].addRequest(lb.getRequest(), curr_time); // give a new request   
         }
 
         if (rand() % 10 == 0) {
